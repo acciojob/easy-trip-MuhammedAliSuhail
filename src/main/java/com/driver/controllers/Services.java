@@ -13,7 +13,7 @@ public class Services {
     Repositorys repo=new Repositorys();
     public void addAirport(Airport a){
         if(repo.AirportsDB.containsKey(a.getAirportName())) {
-            throw new RuntimeException("already exist");
+            return;
         }
 
         repo.AirportsDB.put(a.getAirportName(),a);
