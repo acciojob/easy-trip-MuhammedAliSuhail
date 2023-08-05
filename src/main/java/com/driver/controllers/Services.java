@@ -111,6 +111,8 @@ return "SUCCESS";
             Booking b=repo.bookingDB.get(n);
             if(b.getPassangerId()==passangerId && flightId==b.getFlightId()){
                 iterator1.remove();
+                if(repo.bookingDB.containsKey(n))repo.bookingDB.remove(n);
+
                 for(Date d:repo.FlightDB.keySet()){
                     for(Flight f:repo.FlightDB.get(d)){
                         if(f.getFlightId()==flightId){
@@ -172,7 +174,7 @@ return 0;
                 }
             }
         }
-        return "";
+        return null;
     }
 
 public int  calculateRevenueOfAFlight(int flightId){
