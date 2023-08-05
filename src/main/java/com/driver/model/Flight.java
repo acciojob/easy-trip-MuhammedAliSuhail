@@ -1,6 +1,7 @@
 package com.driver.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class Flight {
 
@@ -16,6 +17,25 @@ public class Flight {
 
     private double duration;
 
+    private int numberOfbookings;
+    private int revanue;
+
+    public int getRevanue() {
+        return revanue;
+    }
+
+    public void setRevanue(int revanue) {
+        this.revanue = revanue;
+    }
+
+    public int getNumberOfbookings() {
+        return numberOfbookings;
+    }
+
+    public void setNumberOfbookings(int numberOfbookings) {
+        this.numberOfbookings = numberOfbookings;
+    }
+
     public Flight() {
 
     }
@@ -27,6 +47,8 @@ public class Flight {
         this.maxCapacity = maxCapacity;
         this.flightDate = flightDate;
         this.duration = duration;
+        this.numberOfbookings=0;
+        this.revanue=0;
     }
 
     public int getFlightId() {
